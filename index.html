@@ -5,21 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Мой сайт</title>
     <style>
-        /* убираем отступы и растягиваем страницу на весь экран */
         html, body {
             height: 100%;
             margin: 0;
         }
 
-        /* фон — картинка на весь экран */
-        body {
-            background-image: url("Logo.png"); /* <- тут имя твоего файла */
-            background-size: cover;      /* заполняет весь экран, обрезая лишнее */
-            background-position: center; /* центрирует картинку */
-            background-repeat: no-repeat;/* не повторять */
+        /* Контейнер на весь экран */
+        .full-screen {
+            position: relative;
+            width: 100%;
+            height: 100vh;          /* высота = высота экрана */
+            overflow: hidden;
+        }
+
+        /* Картинка подстраивается под экран, не искажаясь */
+        .full-screen img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;      /* заполняет экран, обрезая лишнее */
+            object-position: center;
+            display: block;
         }
     </style>
 </head>
 <body>
+    <div class="full-screen">
+        <img src="Logo.png" alt="Моя картинка">
+    </div>
 </body>
 </html>
