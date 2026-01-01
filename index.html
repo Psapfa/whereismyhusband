@@ -19,17 +19,26 @@
         }
 
         img {
-            max-width: 150vw;             /* не шире экрана */
-            max-height: 150vh;            /* не выше экрана */
-            width: auto;
-            height: auto;
-            display: block;
-        }
+    max-width: 130vw;
+    max-height: 130vh;
+    width: auto;
+    height: auto;
+    display: block;
+}
+
+/* Только для телефонов (экраны до 480px шириной) делаем чуть крупнее */
+@media (max-width: 480px) {
+    img {
+        max-width: 115vw;   /* чуть больше ширины экрана */
+        max-height: 115vh;  /* чуть больше высоты экрана */
+    }
+}
     </style>
 </head>
 <body>
     <img src="Logo.png" alt="SCHWARZSOHL">
 </body>
 </html>
+
 
 
