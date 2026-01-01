@@ -6,35 +6,29 @@
     <title>schwarzsohl</title>
     <style>
         html, body {
-            height: 100%;
             margin: 0;
+            padding: 0;
+            height: 100%;
+            background: #000;             /* фон чёрный */
         }
 
         body {
-            background: #000;
             display: flex;
-            justify-content: center;
-            align-items: center;
+            justify-content: center;      /* по центру по горизонтали */
+            align-items: center;          /* по центру по вертикали */
         }
 
-        .logo-wrapper {
-            width: 100%;
-            max-width: 600px;      /* ограничение на больших экранах */
-            padding: 16px;         /* маленькие отступы по краям */
-            box-sizing: border-box;
-        }
-
-        .logo-wrapper img {
+        img {
+            max-width: 100vw;             /* не шире экрана */
+            max-height: 100vh;            /* не выше экрана */
+            width: auto;
+            height: auto;
             display: block;
-            width: 100%;           /* подстраивается по ширине экрана */
-            height: auto;          /* сохраняет пропорции */
         }
     </style>
 </head>
 <body>
-    <div class="logo-wrapper">
-        <img src="Logo.png" alt="SCHWARZSOHL">
-    </div>
+    <img src="Logo.png" alt="SCHWARZSOHL">
 </body>
 </html>
 
