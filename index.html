@@ -7,45 +7,70 @@
     <!-- Favicon -->
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    
+
     <title>schwarzsohl</title>
+
     <style>
         html, body {
             margin: 0;
             padding: 0;
             height: 100%;
-            background: #000;             /* фон чёрный */
+            background: #000;
         }
 
         body {
             display: flex;
-            justify-content: center;      /* по центру по горизонтали */
-            align-items: center;          /* по центру по вертикали */
+            justify-content: center;
+            align-items: center;
         }
 
-        img {
-    max-width: 130vw;
-    max-height: 130vh;
-    width: auto;
-    height: auto;
-    display: block;
-}
+        .logo-wrapper {
+            position: relative;   /* родитель для абсолютного позиционирования */
+            display: inline-block;
+        }
 
-/* Только для телефонов (экраны до 480px шириной) делаем чуть крупнее */
-@media (max-width: 480px) {
-    img {
-        max-width: 115vw;   /* чуть больше ширины экрана */
-        max-height: 115vh;  /* чуть больше высоты экрана */
-    }
-}
+        #logo-main {
+            max-width: 100vw;
+            max-height: 100vh;
+            width: auto;
+            height: auto;
+            display: block;
+        }
+
+        /* Кликабельная зона НОСА */
+        .nose-hitbox {
+            position: absolute;
+
+            /* Координаты и размер зоны (в процентах от картинки) */
+            left: 48.3%;      /* по центру по горизонтали */
+            top: 52%;       /* чуть ниже центра по вертикали */
+
+            width: 4%;    /* ширина красного круга */
+            height: 4%;     /* высота красного круга */
+
+            transform: translate(-50%, -50%);
+            cursor: pointer;
+
+            /* Для точной настройки можешь временно включить:
+               background: rgba(255, 0, 0, 0.35);
+               потом удалить эту строку.
+            */
+        }
+
+        @media (max-width: 480px) {
+            #logo-main {
+                max-width: 115vw;
+                max-height: 115vh;
+            }
+        }
     </style>
 </head>
 <body>
-    <img src="Logo.png" alt="SCHWARZSOHL">
+    <div class="logo-wrapper">
+        <img src="Logo.png" alt="SCHWARZSOHL" id="logo-main">
+
+        <!-- Кликабельна только эта маленькая область на носу -->
+        <a href="contact.html" class="nose-hitbox"></a>
+    </div>
 </body>
 </html>
-
-
-
-
-
