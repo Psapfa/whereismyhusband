@@ -25,7 +25,7 @@
         }
 
         .logo-wrapper {
-            position: relative;   /* родитель для абсолютного позиционирования */
+            position: relative;
             display: inline-block;
         }
 
@@ -41,20 +41,17 @@
         .nose-hitbox {
             position: absolute;
 
-            /* Координаты и размер зоны (в процентах от картинки) */
-            left: 48.3%;      /* по центру по горизонтали */
-            top: 52%;       /* чуть ниже центра по вертикали */
+            
+            left: 48.3%; 
+            top: 52%;
 
-            width: 4%;    /* ширина красного круга */
-            height: 4%;     /* высота красного круга */
+            width: 4%;
+            height: 4%;
 
             transform: translate(-50%, -50%);
             cursor: pointer;
 
-            /* Для точной настройки можешь временно включить:
-               background: rgba(255, 0, 0, 0.35);
-               потом удалить эту строку.
-            */
+            
         }
 
         @media (max-width: 480px) {
@@ -69,8 +66,8 @@
     <div class="logo-wrapper">
         <img src="Logo.png" alt="SCHWARZSOHL" id="logo-main">
 
-        <!-- Кликабельна только эта маленькая область на носу -->
         <a href="contact.html" class="nose-hitbox"></a>
     </div>
 </body>
+
 </html>
